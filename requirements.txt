@@ -3,4 +3,6 @@ numpy
 streamlit
 matplotlib
 seaborn
+streamlit_folium
 plotly
+

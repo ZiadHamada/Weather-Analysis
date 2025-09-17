@@ -44,3 +44,4 @@ def get_season(date):
 # Assuming df has a date column of type `datetime`
 
 df['Season'] = df['Date'].map(get_season)
+

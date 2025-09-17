@@ -7,7 +7,7 @@ import os
 def read_data(file):
     df = pd.read_csv(file)
     return df
-path = r"D:\\Data Analysis\\Projects\\Weather Data(2000-2023)\\Data\\"
+path = "Data/"
 df = pd.concat(map(read_data, glob.glob(os.path.join(path, "*_weather_data.csv"))))
 df = df.reset_index()
 coords_df = read_data(path + "country_coordinates.csv")
@@ -42,4 +42,5 @@ def get_season(date):
         return 'Winter'
 
 # Assuming df has a date column of type `datetime`
+
 df['Season'] = df['Date'].map(get_season)
